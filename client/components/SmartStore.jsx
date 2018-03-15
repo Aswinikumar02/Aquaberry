@@ -23,7 +23,7 @@ export default class SmartStore extends React.Component {
    render() {
 
       return (
-         <div className="bgImage_smartStore" style={{backgroundImage:'url(./client/assets/Images/istock/464602136.jpg)',position:'relative'}}>
+         <div className="bgImage_smartStore" style={{backgroundImage:'url(./client/assets/Images/Newistock/smartstore/iStock-464602136-2.jpg)',position:'relative'}}>
          <div style={{position:'absolute',marginTop:'8%',width:'100%',marginLeft:'1%'}}>
            <Link to ='/mHome'>
            <center><span style={{color:'white',fontSize:'33px'}} id="titleText" >Aquaberry</span></center>

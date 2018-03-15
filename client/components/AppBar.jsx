@@ -17,7 +17,7 @@ class AppBar extends Component {
     this.state = {
       open: false,
       wish: 0,
-      profile: "./client/assets/Images/istock/profile.png"
+      profile: "./client/assets/Images/Newistock/iStock-508132676.jpg"
     };
   }
   handleToggle() {
