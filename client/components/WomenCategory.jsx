@@ -80,7 +80,7 @@ var productData = (this.props.cartDetails.recommend.map((item,key) => {
          </Menu.Item>
          </Link>
          <Menu.Item>
-           <span id='titleText' style={{fontWeight:'normal', letterSpacing:'1px', textTransform:'capitalize', color:"#eee", float:"left", fontSize:'140%'}}>Women's Dresses</span>
+           <span id='titleText' style={{fontWeight:'normal', letterSpacing:'1px', textTransform:'capitalize', color:"#eee", float:"left", fontSize:'135%'}}>Women's Dresses</span>
          </Menu.Item>
          <Menu.Menu position='right'>
 
