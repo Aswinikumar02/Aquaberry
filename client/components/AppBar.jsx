@@ -161,7 +161,7 @@ class AppBar extends Component {
             </MenuItem>
           </Link>
 
-          <Link to="/order">
+          {/* <Link to="/order">
             <MenuItem style={{ marginTop: "0%" }}>
               <Header
                 as="h4"
@@ -174,7 +174,7 @@ class AppBar extends Component {
                 />My Account
               </Header>
             </MenuItem>
-          </Link>
+          </Link> */}
           <Link to="/promotions">
             <MenuItem>
               <Header

@@ -7,13 +7,13 @@ export default class NotificationScreen extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            activeIndex: 0
+            activeIndex: 0, dateValue:""
         }
     }
 
     componentWillMount() {
         var d = new Date();
-        d.setDate(d.getDate() + 10);
+        d.setDate(d.getDate());
         var x = d.toString().slice(4, 16);
         this.setState({
             dateValue: x
@@ -50,7 +50,7 @@ export default class NotificationScreen extends Component {
                         </Grid.Column>
                         <Grid.Column width={16} style={{ display: "flex", flexDirection: "row", justifyContent: "space-between", fontWeight: "bold", textTransform: "capitalise", letterSpacing: "2px" }}>
                             <p className="lightGreyText" style={{fontSize:"75%"}}>ORDER NO: 01120448</p>
-                           <p className="lightGreyText" style={{position:'right', fontSize:"75%"}}>Placed on 23/02/18</p>
+                           <p className="lightGreyText" style={{position:'right', fontSize:"75%"}}>Placed on {this.state.dateValue}</p>
                         </Grid.Column>
                         <Divider />
                         <Grid.Column width={16}  style={{ display: "flex", flexDirection: "row", justifyContent: "flex-start" }}>
