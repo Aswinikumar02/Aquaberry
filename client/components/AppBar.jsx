@@ -64,7 +64,7 @@ class AppBar extends Component {
                 </Link>
                 <Menu.Menu position="right">
                   <Link to="/wishList">
-                    <Menu.Item style={{ marginTop: "6%",marginLeft:'8%' }}>
+                    <Menu.Item style={{ marginTop: "15%",marginLeft:'8%' }}>
                       <Icon
                         name="empty heart"
                         size="large"
@@ -80,7 +80,7 @@ class AppBar extends Component {
                     </Menu.Item>
                   </Link>
                   {/* <Link to='/cart'> */}
-                      <Menu.Item style={{marginTop:'-7%'}}>
+                      <Menu.Item style={{marginTop:'-2%'}}>
                         <Icon name='shopping cart' size='large' style={{color:'white',marginTop:'25%',marginLeft:'-28%'}}/>
 
                  <Label color='red' style={{marginTop:'-10%',marginLeft:'18%',position:'absolute',zIndex:'100'}} circular>{this.props.cartDetails.cartCount}</Label>
