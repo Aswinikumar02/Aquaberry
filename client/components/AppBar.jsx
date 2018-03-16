@@ -17,7 +17,7 @@ class AppBar extends Component {
     this.state = {
       open: false,
       wish: 0,
-      profile: "./client/assets/Images/Newistock/iStock-508132676.jpg"
+      profile: "./client/assets/Images/istock/profile.png"
     };
   }
   handleToggle() {
@@ -64,7 +64,7 @@ class AppBar extends Component {
                 </Link>
                 <Menu.Menu position="right">
                   <Link to="/wishList">
-                    <Menu.Item style={{ marginTop: "15%",marginLeft:'8%' }}>
+                    <Menu.Item style={{ marginTop: "6%",marginLeft:'37%' }}>
                       <Icon
                         name="empty heart"
                         size="large"
@@ -72,7 +72,7 @@ class AppBar extends Component {
                       />
                       <Label
                         color="red"
-                        style={{ marginTop: "-23%", marginLeft: "29%" ,position:'absolute',zIndex:'100'}}
+                        style={{ marginTop: "-89%", marginLeft: "-50%" }}
                         circular
                       >
                         {this.props.cartDetails.count}
@@ -80,10 +80,10 @@ class AppBar extends Component {
                     </Menu.Item>
                   </Link>
                   {/* <Link to='/cart'> */}
-                      <Menu.Item style={{marginTop:'-2%'}}>
-                        <Icon name='shopping cart' size='large' style={{color:'white',marginTop:'25%',marginLeft:'-28%'}}/>
+                      <Menu.Item style={{marginTop:'-7%'}}>
+                        <Icon name='shopping cart' size='large' style={{color:'white',marginTop:'25%'}}/>
 
-                 <Label color='red' style={{marginTop:'-10%',marginLeft:'18%',position:'absolute',zIndex:'100'}} circular>{this.props.cartDetails.cartCount}</Label>
+                 <Label color='red' style={{marginTop:'-10%',marginLeft:'-21%'}} circular>{this.props.cartDetails.cartCount}</Label>
                       </Menu.Item>
                       </Menu.Menu>
                     </Menu>
@@ -161,7 +161,7 @@ class AppBar extends Component {
             </MenuItem>
           </Link>
 
-          {/* <Link to="/order">
+          <Link to="/order">
             <MenuItem style={{ marginTop: "0%" }}>
               <Header
                 as="h4"
@@ -174,7 +174,7 @@ class AppBar extends Component {
                 />My Account
               </Header>
             </MenuItem>
-          </Link> */}
+          </Link>
           <Link to="/promotions">
             <MenuItem>
               <Header

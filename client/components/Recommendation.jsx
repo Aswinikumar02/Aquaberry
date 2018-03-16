@@ -24,6 +24,44 @@ import { bindActionCreators } from "redux";
 
 import AddtoCart from "./../../redux/actions/addItem.js";
 
+const data = [
+  {
+    imageurl: "BlackBlouse.jpg",
+    name: "black tops",
+    cost: 40
+  },
+  {
+    imageurl: "BlackNeckTop.jpg",
+    name: "black tops",
+    cost: 40
+  },
+  {
+    imageurl: "GreyCheckedTop.jpg",
+    name: "black tops",
+    cost: 40
+  },
+  {
+    imageurl: "RustPrintShirt.jpg",
+    name: "black tops",
+    cost: 40
+  },
+  {
+    imageurl: "NavyPrintedShirt.jpg",
+    name: "black tops",
+    cost: 40
+  },
+  {
+    imageurl: "GreenSheeredTop.jpg",
+    name: "black tops",
+    cost: 40
+  },
+  {
+    imageurl: "PetiteRuffleTop.jpg",
+    name: "black tops",
+    cost: 40
+  }
+];
+
 class Recommendation extends Component {
   constructor(props) {
     super(props);
@@ -63,19 +101,19 @@ class Recommendation extends Component {
       slidesToScroll: 1
     };
 
-    // var hearticon = (
-    //   <Icon
-    //     name="empty heart"
-    //     style={{
-    //       position: "absolute",
-    //       color: "red",
-    //       top: "8px",
-    //       right: "16px"
-    //     }}
-    //     size="large"
-    //     onClick={() => this.props.AddtoCart(data[0])}
-    //   />
-    // );
+    var hearticon = (
+      <Icon
+        name="empty heart"
+        style={{
+          position: "absolute",
+          color: "red",
+          top: "8px",
+          right: "16px"
+        }}
+        size="large"
+        onClick={() => this.props.AddtoCart(data[0])}
+      />
+    );
 
     var womanCategory = this.props.cartDetails.women.map((item, key) => {
       var iconComponent = item.checked ? (

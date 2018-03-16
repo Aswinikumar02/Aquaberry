@@ -202,57 +202,58 @@ class ReturnChatApp extends React.Component {
   }
 
   printMessages(item) {
-    if (item.sender === "User") {
-      // return (<Card zDepth={3} style={userCardStyle}>
-      //           <CardHeader
-      //             title="User"
-      //             avatarRight="images/bot.png"
-      //           />
-      //           <CardText>
-      //             {item.text}
-      //           </CardText>
-      //         </Card>)
-      return (
-        <Grid fluid>
-          <Grid.Column width={16}>
-            <div
-              style={{
-                display: "block"
-              }}
-            >
-              <Image avatar
-                src='./client/assets/Images/istock/profile.png'
-                floated="right"
-                size="massive"
-                alt=""
-                style={{
-                  marginLeft: "2%"
-                }}
-              />
-              <Card
-                style={{
-                  borderRadius: "30px",
-                  padding: "0 1%",
-                  margin: "1% -2.5% 6% 33.5%",
-                  color: "black",
-                  width: "50%"
-                }}
-              >
-                <Card.Content>
-                  <Card.Description
-                    style={{
-                      color: "#212121"
-                    }}
-                  >
-                    {item.text}
-                  </Card.Description>
-                </Card.Content>
-              </Card>
-            </div>
-          </Grid.Column>
-        </Grid>
-      );
-    } else {
+    // if (item.sender === "User") {
+    //   // return (<Card zDepth={3} style={userCardStyle}>
+    //   //           <CardHeader
+    //   //             title="User"
+    //   //             avatarRight="images/bot.png"
+    //   //           />
+    //   //           <CardText>
+    //   //             {item.text}
+    //   //           </CardText>
+    //   //         </Card>)
+    //   return (
+    //     <Grid fluid>
+    //       <Grid.Column width={16}>
+    //         <div
+    //           style={{
+    //             display: "block"
+    //           }}
+    //         >
+    //           <Image avatar
+    //             src='./client/assets/Images/istock/profile.png'
+    //             floated="right"
+    //             size="massive"
+    //             alt=""
+    //             style={{
+    //               marginLeft: "2%"
+    //             }}
+    //           />
+    //           <Card
+    //             style={{
+    //               borderRadius: "30px",
+    //               padding: "0 1%",
+    //               margin: "1% -2.5% 6% 33.5%",
+    //               color: "black",
+    //               width: "50%"
+    //             }}
+    //           >
+    //             <Card.Content>
+    //               <Card.Description
+    //                 style={{
+    //                   color: "#212121"
+    //                 }}
+    //               >
+    //                 {item.text}
+    //               </Card.Description>
+    //             </Card.Content>
+    //           </Card>
+    //         </div>
+    //       </Grid.Column>
+    //     </Grid>
+    //   );
+    // }
+    if(item.sender == 'Bot') {
       // return (<Card zDepth={3} style={botCardStyle}>
       //           <CardText>
       //             {item.text}
@@ -272,7 +273,7 @@ class ReturnChatApp extends React.Component {
                 alt=""
                 style={{
                   marginLeft: "-7%",
-                  marginTop: "-16%"
+                  marginTop: "0%"
                 }}
               />
               <Card
