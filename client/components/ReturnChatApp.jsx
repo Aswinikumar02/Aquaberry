@@ -303,15 +303,15 @@ class ReturnChatApp extends React.Component {
 
   speechToText(e) {
     var context = this;
-    var recognition = new SpeechRecognition();
-    var speechRecognitionList = new SpeechGrammarList();
-    recognition.lang = "en-US";
-    recognition.interimResults = false;
-    recognition.maxAlternatives = 1;
-
-    recognition.start();
-
-    recognition.onresult = function(event) {
+    // var recognition = new SpeechRecognition();
+    // var speechRecognitionList = new SpeechGrammarList();
+    // recognition.lang = "en-US";
+    // recognition.interimResults = false;
+    // recognition.maxAlternatives = 1;
+    //
+    // recognition.start();
+    //
+    // recognition.onresult = function(event) {
       // var speechResult = event.results[0][0].transcript;
       // console.log('Speech Result: ', speechResult);
       var speechResult;
@@ -338,15 +338,15 @@ class ReturnChatApp extends React.Component {
       });
     };
 
-    recognition.onspeechend = function() {
-      recognition.stop();
-    };
+    // recognition.onspeechend = function() {
+    //   recognition.stop();
+    // };
 
-    recognition.onerror = function(event) {
-      diagnosticPara.textContent =
-        "Error occurred in recognition: " + event.error;
-    };
-  }
+    // recognition.onerror = function(event) {
+    //   diagnosticPara.textContent =
+    //     "Error occurred in recognition: " + event.error;
+    // };
+  // }
 
   textToSpeech(botReply) {
     // var inputTxt = 'This is the text to speech test.';

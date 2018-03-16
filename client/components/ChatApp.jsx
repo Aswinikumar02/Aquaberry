@@ -43,12 +43,14 @@ const botPaperStyle = {
     margin: 20,
     padding: 13
 };
-
+var usermessage = '';
 class ChatApp extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
             userInput: '',
+            speechResult:'',
+            textdata:' ',
             dateModal:false,
             autoHideDuration: 6000,
             dateValue:'',
@@ -109,7 +111,9 @@ class ChatApp extends React.Component {
         // var requestString = 'http://127.0.0.1:8080/callDialogflow/' + this.state.userInput + '/' + counter;
         var reply;
         if (counter == 1) {
+
             reply = 'Hello Rachel, how can I help you?'
+
             this.textToSpeech(reply);
             var tempMessages = this.state.messages;
             var tempBotMessage = {
@@ -202,49 +206,59 @@ class ChatApp extends React.Component {
     }
 
     printMessages(item) {
-        if (item.sender === 'User') {
-            // return (<Card zDepth={3} style={userCardStyle}>
-            //           <CardHeader
-            //             title="User"
-            //             avatarRight="images/bot.png"
-            //           />
-            //           <CardText>
-            //             {item.text}
-            //           </CardText>
-            //         </Card>)
-            return (
-                <Grid fluid>
-                  <Grid.Column width = {16} >
-                    <div style={{
-                    display: 'block'
-                  }}>
-                  <Image avatar src='./client/assets/Images/istock/profile.png' floated='right' size="massive" alt="" style={{
-                      marginLeft: '2%'
-                    }}/>
-                  <Card style={{
-                      borderRadius: '30px',
-                      padding: '0 1%',
-                      margin: '1% -2.5% 6% 33.5%',
-                      color: 'black',
-                      width: '50%'
-                    }}>
-                    <Card.Content>
-                      <Card.Description style={{
-                          color: '#212121'
-                        }}>{item.text}</Card.Description>
-                    </Card.Content>
-                  </Card>
-                    </div>
-                    </Grid.Column>
-                </Grid>
-            )
-        }
-        else {
-            // return (<Card zDepth={3} style={botCardStyle}>
-            //           <CardText>
-            //             {item.text}
-            //           </CardText>>
-            //         </Card>)
+      console.log('inside item',item.sender);
+        //if (item.sender === 'User') {
+          // let input = item.text;
+          // let data = input.split(" ");
+          // console.log('data value',data);
+          // console.log('data value,,,,,,,',data.length);
+          //  let i = 0;
+          //  if(i < data.length){
+          //    console.log('value iof i', data[i]);
+          //    usermessage = data[i];
+          //    this.setState({textdata:usermessage})
+          //  }
+          //  i++
+          // let timerId = setInterval(() =>{
+          //   if(i < data.length){
+          //     this.setState({
+          //       textdata : this.state.textdata + " " + data[i]
+          //     });
+          //   }
+          //   i++;
+          //   if( i === data.length + 1){
+          //     clearInterval(timerId);
+          //   }
+          // },750);
+          //console.log('outside render',this.state.textdata);
+            //return (
+            //     <Grid fluid>
+            //       <Grid.Column width = {16} >
+            //         <div style={{
+            //         display: 'block'
+            //       }}>
+            //       <Image avatar src='./client/assets/Images/istock/profile.png' floated='right' size="massive" alt="" style={{
+            //           marginLeft: '2%'
+            //         }}/>
+            //       <Card style={{
+            //           borderRadius: '30px',
+            //           padding: '0 1%',
+            //           margin: '1% -2.5% 6% 33.5%',
+            //           color: 'black',
+            //           width: '50%'
+            //         }}>
+            //         <Card.Content>
+            //           <Card.Description style={{
+            //               color: '#212121'
+            //             }}>{item.text}</Card.Description>
+            //         </Card.Content>
+            //       </Card>
+            //         </div>
+            //         </Grid.Column>
+            //     </Grid>
+            // )
+        //}
+        if(item.sender === 'Bot') {
             return (
                 <Grid fluid>
                   <Grid.Column width = {16} >
@@ -252,7 +266,7 @@ class ChatApp extends React.Component {
                     display: 'block'
                   }}>
                   <Image src='./client/assets/Images/istock/bot.png' size='tiny' style={{
-                      marginLeft: '-7%',marginTop:'-16%'
+                      marginLeft: '-7%',marginTop:'-2%'
                     }}/>
                   {/* <Icon name='android' size="large" alt="" style={{
                       marginLeft: '0%',marginTop:'-16%'
@@ -276,53 +290,92 @@ class ChatApp extends React.Component {
             )
         }
     }
+    speechToText(){
+      console.log('inside speech to text');
+      var speechResult;
+              questionCounter++;
+              var context = this;
+              var thirdResponse = `Reshedule it to Friday ${this.state.dateValue} at noon`;
+              if(questionCounter == 1){
+                speechResult = 'Hi'
+              }
+              else if(questionCounter == 2){
+                // let input = 'Can you reschedule the delivery of my order';
+                // let data = input.split(' ');
+                // console.log('data length ',data.length);
+                // let i = 0;
+                // let timerId = setInterval(() => {
+                //   if(i < data.length){
+                //     this.setState({
+                //       speechResult : this.state.speechResult + " " + data[i]
+                //     })
+                //     console.log('inside if',this.state.speechResult);
+                //   }
+                //   i++;
+                //   if(i === data.length + 1){
+                //     clearInterval(timerId);
+                //   }
+                // },750)
+                speechResult = 'Can you reschedule the delivery of my order'
+              }
+              else if(questionCounter == 3){
+                speechResult = thirdResponse
+              }
+              else if(questionCounter == 4){
+                speechResult = 'Thanks!'
+              }
 
-    speechToText(e) {
-        var context = this;
-        var recognition = new SpeechRecognition();
-        var speechRecognitionList = new SpeechGrammarList();
-        recognition.lang = 'en-US';
-        recognition.interimResults = false;
-        recognition.maxAlternatives = 1;
-        var thirdResponse = `Reshedule it to Friday ${this.state.dateValue} at noon`;
-        recognition.start();
 
-        recognition.onresult = function (event) {
-            // var speechResult = event.results[0][0].transcript;
-            // console.log('Speech Result: ', speechResult);
-            var speechResult;
-            questionCounter++;
-
-            if(questionCounter == 1){
-              speechResult = 'Hi'
-            }
-            else if(questionCounter == 2){
-              speechResult = 'Can you reschedule the delivery of my order'
-            }
-            // else if(questionCounter == 3){
-            //   speechResult = 'Thanks, the order number is .'
-            // }
-            else if(questionCounter == 3){
-              speechResult = thirdResponse
-            }
-            else if(questionCounter == 4){
-              speechResult = 'Thanks!'
-            }
-
-
-            context.setState({ userInput: speechResult }, () => {
-                context.handleSendClick();
-            });
-        }
-
-        recognition.onspeechend = function () {
-            recognition.stop();
-        }
-
-        recognition.onerror = function (event) {
-            diagnosticPara.textContent = 'Error occurred in recognition: ' + event.error;
-        }
-    }
+              context.setState({ userInput: speechResult }, () => {
+                  context.handleSendClick();
+              });
+          }
+    // speechToText(e) {
+    //     var context = this;
+    //     var recognition = new SpeechRecognition();
+    //     var speechRecognitionList = new SpeechGrammarList();
+    //     recognition.lang = 'en-US';
+    //     recognition.interimResults = false;
+    //     recognition.maxAlternatives = 1;
+    //     var thirdResponse = `Reshedule it to Friday ${this.state.dateValue} at noon`;
+    //     recognition.start();
+    //
+    //     recognition.onresult = function (event) {
+    //         // var speechResult = event.results[0][0].transcript;
+    //         // console.log('Speech Result: ', speechResult);
+    //         var speechResult;
+    //         questionCounter++;
+    //
+    //         if(questionCounter == 1){
+    //           speechResult = 'Hi'
+    //         }
+    //         else if(questionCounter == 2){
+    //           speechResult = 'Can you reschedule the delivery of my order'
+    //         }
+    //         // else if(questionCounter == 3){
+    //         //   speechResult = 'Thanks, the order number is .'
+    //         // }
+    //         else if(questionCounter == 3){
+    //           speechResult = thirdResponse
+    //         }
+    //         else if(questionCounter == 4){
+    //           speechResult = 'Thanks!'
+    //         }
+    //
+    //
+    //         context.setState({ userInput: speechResult }, () => {
+    //             context.handleSendClick();
+    //         });
+    //     }
+    //
+    //     recognition.onspeechend = function () {
+    //         recognition.stop();
+    //     }
+    //
+    //     recognition.onerror = function (event) {
+    //         diagnosticPara.textContent = 'Error occurred in recognition: ' + event.error;
+    //     }
+    // }
 
     textToSpeech(botReply) {
         // var inputTxt = 'This is the text to speech test.';
