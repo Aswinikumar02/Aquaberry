@@ -3,6 +3,7 @@ import { Grid } from "semantic-ui-react";
 import { Link } from "react-router-dom";
 import AppBar from "./AppBar.jsx";
 import ReturnChatApp from "./ReturnChatApp.jsx";
+// import ReturnChatAppWithMic from "./ReturnChatAppWithMic.jsx";
 
 const ExchangeSuccessful = () => {
   return (
@@ -25,6 +26,7 @@ const ExchangeSuccessful = () => {
         <Grid.Row>
           <Grid.Column width={16}>
             <ReturnChatApp />
+            {/* <ReturnChatAppWithMic /> */}
           </Grid.Column>
         </Grid.Row>
       </Grid>
