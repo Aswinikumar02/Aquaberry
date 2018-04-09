@@ -77,7 +77,7 @@ const express = require("express"),
   bodyParser = require("body-parser"),
   apiai = require("apiai"),
   app = express(),
-  PORT = process.env.PORT || 8080,
+  PORT = process.env.PORT || 8082,
   dialogflowApp = apiai("cfbe8610671d44d994e4d939ded5fc37"),
   server = require("http").Server(app);
 
