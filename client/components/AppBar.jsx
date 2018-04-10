@@ -57,7 +57,7 @@ class AppBar extends Component {
                 <Link to="/mHome">
                   <Menu.Item style={{ display: "flux" }}>
                     <Image
-                      size="small"
+                      size="large"
                       src="./client/assets/Images/istock/aquaberry1.png"
                     />
                     {/* <span id="titleText" style={{fontWeight:'normal', letterSpacing:'3px', textTransform:'capitalize', color:"white", float:"left", fontSize:'165%'}}>Aquaberry</span> */}

@@ -365,6 +365,19 @@ export default class MobileAppHome extends React.Component {
                         <List.Header>Bags</List.Header>
                       </List.Content>
                     </List.Item>
+                    <List.Item style={{ backgroundColor: "#dec8ea" }}>
+                      <List.Content floated="right">
+                        <Icon name="chevron right" size="large" />
+                      </List.Content>
+                      <Image
+                        avatar
+                        src="https://image.freepik.com/free-photo/cosmetics-and-accessories-near-keyboard_23-2147778967.jpg"
+                        alt=""
+                      />
+                      <List.Content>
+                        <List.Header>Cosmetics and Accessories </List.Header>
+                      </List.Content>
+                    </List.Item>
                     <List.Item style={{ backgroundColor: "#ed8e8e" }}>
                       <List.Content floated="right">
                         <Icon name="chevron right" size="large" />

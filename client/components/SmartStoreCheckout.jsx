@@ -105,12 +105,22 @@ export default class SmartStoreCheckout extends Component {
                                         <p style={{leeterSpacing:"1px"}}><Icon color="green" name="dot circle outline" />Processing</p>
                                     </p>
                                 </Grid.Column>
+                                <Grid.Column width={16} style={{ marginTop:'5%' ,display: "flex", flexDirection: "row", justifyContent: "flex-start" }}>
+                                    <Image size='tiny' style={{ borderRadius: "10%", height: '100%' }} src='/client/assets/Images/istock/467870548-1.jpg' />
+                                    <p style={{ marginLeft: "3%" }}>
+                                        <Header className="darkText" > Sia Dress w/ Pockets</Header>
+                                        <p className="greyText" style={{ display: "flex", flexDirection: "row", justifyContent: "space-between", fontSize: "90%", color: "#9E9E9E" }}><span><Header>$20.00</Header></span>   <span><span style={{ fontWeight: "bold" }}>Quantity</span> 1 Item</span> </p>
+                                        <p style={{leeterSpacing:"1px"}}><Icon color="green" name="dot circle outline" />Processing</p>
+                                    </p>
+                                </Grid.Column>
                             </Grid.Row>
+
+
 
                             <Grid.Row only='mobile' >
                                 <Grid.Column width={1} />
                                 <Grid.Column width={14}>
-                                    <center><p style={{fontWeight:"bold"}}> Balance amount in your digi wallet is <h3>$122</h3> </p></center>
+                                    <center><p style={{fontWeight:"bold"}}> Balance amount in your digi wallet is <h3>$102</h3> </p></center>
                                 </Grid.Column>
                                 <Grid.Column width={1} />
                             </Grid.Row>

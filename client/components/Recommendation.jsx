@@ -502,7 +502,7 @@ class Recommendation extends Component {
                     fontSize: "15px"
                   }}
                 >
-                  Celebrities Fashion
+                  New range of Accessories & Cosmetics
                 </center>
               </Grid.Column>
             </Grid.Row>

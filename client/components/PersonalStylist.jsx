@@ -140,6 +140,14 @@ class PersonalStylist extends Component {
                   />
                   <Checkbox
                     labelStyle={{ fontFamily: "Raleway" }}
+                    label="Cosmetic & Accessories"
+                    style={{
+                      fontFamily: "Raleway",
+                      width: "100%"
+                    }}
+                  />
+                  <Checkbox
+                    labelStyle={{ fontFamily: "Raleway" }}
                     label="Shoes"
                     style={{
                       fontFamily: "Raleway",
