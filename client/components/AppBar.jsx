@@ -17,7 +17,8 @@ class AppBar extends Component {
     this.state = {
       open: false,
       wish: 0,
-      profile: "./client/assets/Images/istock/profile.png"
+      cart: 0,
+      profile: "./client/assets/Images/Newistock/profile/iStock-508132676.jpg"
     };
   }
   handleToggle() {
@@ -83,7 +84,7 @@ class AppBar extends Component {
                       <Menu.Item style={{marginTop:'-7%'}}>
                         <Icon name='shopping cart' size='large' style={{color:'white',marginTop:'25%'}}/>
 
-                 <Label color='red' style={{marginTop:'-10%',marginLeft:'-21%'}} circular>{this.props.cartDetails.cartCount}</Label>
+                 <Label color='red' style={{marginTop:'-10%',marginLeft:'-21%'}} circular>{this.state.cart}</Label>
                       </Menu.Item>
                       </Menu.Menu>
                     </Menu>
