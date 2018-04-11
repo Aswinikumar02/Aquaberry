@@ -91,10 +91,10 @@ var productData = (this.props.cartDetails.recommend.map((item,key) => {
 
 
 
-                    <Menu.Item style={{marginTop:'-3%',marginLeft:'-21%'}}>
+                    {/* <Menu.Item style={{marginTop:'-3%',marginLeft:'-21%'}}>
                       <Icon name='shopping cart' size='large' style={{color:'white',marginTop:'25%'}}/>
                <Label color='red' style={{marginTop:'-10%',marginLeft:'-21%'}} circular>0</Label>
-                    </Menu.Item>
+                    </Menu.Item> */}
 
          </Menu.Menu>
        </Menu>
