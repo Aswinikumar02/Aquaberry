@@ -175,7 +175,6 @@ export default class OrderDetails extends Component {
                 Placed on {this.state.dateValueTransit}
               </p>
             </Grid.Column>
-            <Divider />
             <Grid.Column
               width={16}
               style={{
@@ -214,14 +213,18 @@ export default class OrderDetails extends Component {
                   <Link to="/modifyDelivery">Need Help? </Link>{" "}
                 </p> */}
               </p>
-            </Grid.Column>
 
+            </Grid.Column>
+            <Grid.Column width={16}>
+              <Divider />
+            </Grid.Column>
             <Grid.Column
               width={16}
               style={{
                 display: "flex",
                 flexDirection: "row",
-                justifyContent: "flex-start",marginTop:'5%'
+                justifyContent: "flex-start",
+                marginTop:'2%'
               }}
             >
               <Image
@@ -255,12 +258,15 @@ export default class OrderDetails extends Component {
                 </p> */}
               </p>
             </Grid.Column>
+            <Grid.Column width={16}>
+              <Divider />
+            </Grid.Column>
             <Grid.Column
               width={16}
               style={{
                 display: "flex",
                 flexDirection: "row",
-                justifyContent: "flex-start",marginTop:'5%'
+                justifyContent: "flex-start",marginTop:'2%'
               }}
             >
               <Image
@@ -294,7 +300,6 @@ export default class OrderDetails extends Component {
                 </p>
               </p>
             </Grid.Column>
-
           </Grid.Row>
 
           <Grid.Row
