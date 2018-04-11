@@ -59,7 +59,24 @@ const WishList = () => {
           </Grid.Column>
           <Grid.Column width={1} />
         </Grid.Row>
-
+        <Grid.Row style={{ marginBottom: "12%" }}>
+          <Grid.Column width={1} />
+          <Grid.Column width={7}>
+            <Image src="./client/assets/Images/Newistock/jewellery/Berry lustre A45.jpg" />
+            <div>
+              <p style={{ fontWeight: "bold" }}>Berry lustre A45</p>
+              <p>$13.00</p>
+            </div>
+          </Grid.Column>
+          <Grid.Column width={7}>
+            <Image src="./client/assets/Images/Newistock/jewellery/Dean pendant necklace with precious stones.png" />
+            <div>
+              <p style={{ fontWeight: "bold" }}>Dean pendant necklace with precious stones</p>
+              <p>$10.00</p>
+            </div>
+          </Grid.Column>
+          <Grid.Column width={1} />
+        </Grid.Row>
         <Grid.Row style={{ marginBottom: "12%" }}>
           <Grid.Column width={1} />
           <Grid.Column width={7}>

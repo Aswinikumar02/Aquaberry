@@ -73,6 +73,10 @@ class Recommendation extends Component {
       emptyHeart1: true,
       emptyHeart2: true,
       emptyHeart3: true,
+      emptyHeart4: true,
+      emptyHeart5: true,
+      emptyHeart6: true,
+      emptyHeart7: true,
     };
     this.handleWishlist = this.handleWishlist.bind(this);
   }
@@ -522,8 +526,113 @@ class Recommendation extends Component {
                     className="card_Promotions_Carousel"
                     size="medium"
                     style={{ borderRadius: "2%", height: "100%" }}
-                    src="/client/assets/Images/Newistock/recommended/celebrities/iStock-514514983.jpg"
+                    src="/client/assets/Images/Newistock/jewellery/Berry lustre A45.jpg"
                   />
+                  {this.state.emptyHeart4 ? (
+                    <Icon
+                      name="empty heart"
+                      style={{
+                        position: "absolute",
+                        top: "8px",
+                        right: "16px"
+                      }}
+                      size="large"
+                      color="red"
+                      onClick={() => this.setState({ emptyHeart4: false })}
+                    />
+                  ) : (
+                    <Icon
+                      name="heart"
+                      style={{
+                        position: "absolute",
+                        top: "8px",
+                        right: "16px"
+                      }}
+                      size="large"
+                      color="red"
+                      onClick={() => this.setState({ emptyHeart4: true })}
+                    />
+                  )}
+                  <span
+                    style={{ marginTop: "4%", textTransform: "capitalise" }}
+                  >
+                    <center>
+                      <h5 style={{ fontFamily: "Raleway", fontSize: "90%" }}>
+                        Berry lustre A45
+                      </h5>
+                    </center>
+                  </span>
+                  <span
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-around"
+                    }}
+                  >
+                    <span>$13</span>
+                  </span>
+                </Grid.Column>
+              </Grid.Row>
+            </Grid>
+
+            <Grid style={{ marginTop: "0%", marginBottom: "3%" }}>
+              <Grid.Row>
+                <Grid.Column width={1} />
+                {/* <img src='./client/assets/Images/istock/622809430ss.jpg' /> */}
+                <Grid.Column
+                  width={15}
+                  style={{ display: "flex", flexDirection: "column" }}
+                >
+
+                  <Image
+                    className="card_Promotions_Carousel"
+                    size="medium"
+                    style={{ borderRadius: "2%", height: "100%" }}
+                    src="/client/assets/Images/Newistock/jewellery/Dean pendant necklace with precious stones.png"
+                  />
+                  {this.state.emptyHeart5 ? (
+                    <Icon
+                      name="empty heart"
+                      style={{
+                        position: "absolute",
+                        top: "8px",
+                        right: "16px"
+                      }}
+                      size="large"
+                      color="red"
+                      onClick={() => this.setState({ emptyHeart5: false })}
+                    />
+                  ) : (
+                    <Icon
+                      name="heart"
+                      style={{
+                        position: "absolute",
+                        top: "8px",
+                        right: "16px"
+                      }}
+                      size="large"
+                      color="red"
+                      onClick={() => this.setState({ emptyHeart5: true })}
+                    />
+                  )}
+                  <span
+                    style={{ marginTop: "4%", textTransform: "capitalise" }}
+                  >
+                    <center>
+                      <h5 style={{ fontFamily: "Raleway", fontSize: "90%" }}>
+                        Dean pendant necklace with precious stones
+                      </h5>
+                    </center>
+                  </span>
+                  <span
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-around"
+                    }}
+                  >
+                    <span>$10</span>
+                  </span>
                 </Grid.Column>
               </Grid.Row>
             </Grid>
@@ -540,12 +649,54 @@ class Recommendation extends Component {
                     className="card_Promotions_Carousel"
                     size="medium"
                     style={{ borderRadius: "2%", height: "100%" }}
-                    src="/client/assets/Images/Newistock/recommended/celebrities/iStock-611899104.jpg"
+                    src="/client/assets/Images/Newistock/jewellery/Ciara tonal blush.jpg"
                   />
+                  {this.state.emptyHeart6 ? (
+                    <Icon
+                      name="empty heart"
+                      style={{
+                        position: "absolute",
+                        top: "8px",
+                        right: "16px"
+                      }}
+                      size="large"
+                      color="red"
+                      onClick={() => this.setState({ emptyHeart6: false })}
+                    />
+                  ) : (
+                    <Icon
+                      name="heart"
+                      style={{
+                        position: "absolute",
+                        top: "8px",
+                        right: "16px"
+                      }}
+                      size="large"
+                      color="red"
+                      onClick={() => this.setState({ emptyHeart6: true })}
+                    />
+                  )}
+                  <span
+                    style={{ marginTop: "4%", textTransform: "capitalise" }}
+                  >
+                    <center>
+                      <h5 style={{ fontFamily: "Raleway", fontSize: "90%" }}>
+                        Ciara tonal blush
+                      </h5>
+                    </center>
+                  </span>
+                  <span
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-around"
+                    }}
+                  >
+                    <span>$25.50</span>
+                  </span>
                 </Grid.Column>
               </Grid.Row>
             </Grid>
-
             <Grid style={{ marginTop: "0%", marginBottom: "3%" }}>
               <Grid.Row>
                 <Grid.Column width={1} />
@@ -558,8 +709,51 @@ class Recommendation extends Component {
                     className="card_Promotions_Carousel"
                     size="medium"
                     style={{ borderRadius: "2%", height: "100%" }}
-                    src="/client/assets/Images/Newistock/recommended/celebrities/iStock-184911935.jpg"
+                    src="/client/assets/Images/Newistock/jewellery/Capricious lustre AB7.jpg"
                   />
+                  {this.state.emptyHeart7 ? (
+                    <Icon
+                      name="empty heart"
+                      style={{
+                        position: "absolute",
+                        top: "8px",
+                        right: "16px"
+                      }}
+                      size="large"
+                      color="red"
+                      onClick={() => this.setState({ emptyHeart7: false })}
+                    />
+                  ) : (
+                    <Icon
+                      name="heart"
+                      style={{
+                        position: "absolute",
+                        top: "8px",
+                        right: "16px"
+                      }}
+                      size="large"
+                      color="red"
+                      onClick={() => this.setState({ emptyHeart7: true })}
+                    />
+                  )}
+                  <span
+                    style={{ marginTop: "4%", textTransform: "capitalise" }}
+                  >
+                    <center>
+                      <h5 style={{ fontFamily: "Raleway", fontSize: "90%" }}>
+                        Capricious lustre AB7
+                      </h5>
+                    </center>
+                  </span>
+                  <span
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "space-around"
+                    }}
+                  >
+                    <span>$17.50</span>
+                  </span>
                 </Grid.Column>
               </Grid.Row>
             </Grid>

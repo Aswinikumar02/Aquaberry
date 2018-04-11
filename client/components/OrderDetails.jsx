@@ -209,23 +209,92 @@ export default class OrderDetails extends Component {
                   </span>{" "}
                 </p>
 
+                {/* <p className="greyText">
+                  {" "}
+                  <Link to="/modifyDelivery">Need Help? </Link>{" "}
+                </p> */}
+              </p>
+            </Grid.Column>
+
+            <Grid.Column
+              width={16}
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                justifyContent: "flex-start",marginTop:'5%'
+              }}
+            >
+              <Image
+                size="tiny"
+                style={{ borderRadius: "10%", height: "100%" }}
+                src="/client/assets/Images/Newistock/jewellery/Dean pendant necklace with precious stones.png"
+              />
+              <p style={{ marginLeft: "3%" }}>
+                <Header className="darkText">Dean pendant necklace</Header>
+                <p
+                  className="greyText"
+                  style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    justifyContent: "space-between",
+                    fontSize: "90%",
+                    color: "#9E9E9E"
+                  }}
+                >
+                  <span>
+                    <Header className="darkText">$10.00</Header>
+                  </span>{" "}
+                  <span>
+                    <span style={{ fontWeight: "bold" }}>Quantity</span> 1 Item
+                  </span>{" "}
+                </p>
+
+                {/* <p className="greyText">
+                  {" "}
+                  <Link to="/modifyDelivery">Need Help? </Link>{" "}
+                </p> */}
+              </p>
+            </Grid.Column>
+            <Grid.Column
+              width={16}
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                justifyContent: "flex-start",marginTop:'5%'
+              }}
+            >
+              <Image
+                size="tiny"
+                style={{ borderRadius: "10%", height: "100%" }}
+                src="/client/assets/Images/Newistock/jewellery/Berry lustre A45.jpg"
+              />
+              <p style={{ marginLeft: "3%" }}>
+                <Header className="darkText" style={{ wordSpacing: "15px" }}>Berry lustre A45</Header>
+                <p
+                  className="greyText"
+                  style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    justifyContent: "space-between",
+                    fontSize: "90%",
+                    color: "#9E9E9E"
+                  }}
+                >
+                  <span>
+                    <Header className="darkText">$13.00</Header>
+                  </span>{" "}
+                  <span>
+                    <span style={{ fontWeight: "bold" }}>Quantity</span> 1 Item
+                  </span>{" "}
+                </p>
+
                 <p className="greyText">
                   {" "}
                   <Link to="/modifyDelivery">Need Help? </Link>{" "}
                 </p>
               </p>
             </Grid.Column>
-            {/* Accordion is needed */}
-            {/* <Grid.Column width={16}>
-                            <Accordion >
-                                <Accordion.Title active={activeIndex === 0} index={0} onClick={this.handleClick.bind(this)}>
-                                    <Icon name='dropdown' />INFO
-                                </Accordion.Title>
-                                <Accordion.Content>
-                                    <Divider />
-                                </Accordion.Content>
-                            </Accordion>
-                         </Grid.Column> */}
+
           </Grid.Row>
 
           <Grid.Row

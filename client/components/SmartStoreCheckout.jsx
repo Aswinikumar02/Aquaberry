@@ -106,10 +106,18 @@ export default class SmartStoreCheckout extends Component {
                                     </p>
                                 </Grid.Column>
                                 <Grid.Column width={16} style={{ marginTop:'5%' ,display: "flex", flexDirection: "row", justifyContent: "flex-start" }}>
-                                    <Image size='tiny' style={{ borderRadius: "10%", height: '100%' }} src='/client/assets/Images/istock/467870548-1.jpg' />
+                                    <Image size='tiny' style={{ borderRadius: "10%", height: '100%' }} src='/client/assets/Images/Newistock/jewellery/Dean pendant necklace with precious stones.png' />
                                     <p style={{ marginLeft: "3%" }}>
-                                        <Header className="darkText" > Sia Dress w/ Pockets</Header>
-                                        <p className="greyText" style={{ display: "flex", flexDirection: "row", justifyContent: "space-between", fontSize: "90%", color: "#9E9E9E" }}><span><Header>$20.00</Header></span>   <span><span style={{ fontWeight: "bold" }}>Quantity</span> 1 Item</span> </p>
+                                        <Header className="darkText" >Dean pendant necklace</Header>
+                                        <p className="greyText" style={{ display: "flex", flexDirection: "row", justifyContent: "space-between", fontSize: "90%", color: "#9E9E9E" }}><span><Header>$10.00</Header></span>   <span><span style={{ fontWeight: "bold" }}>Quantity</span> 1 Item</span> </p>
+                                        <p style={{leeterSpacing:"1px"}}><Icon color="green" name="dot circle outline" />Processing</p>
+                                    </p>
+                                </Grid.Column>
+                                <Grid.Column width={16} style={{ marginTop:'5%' ,display: "flex", flexDirection: "row", justifyContent: "flex-start" }}>
+                                    <Image size='tiny' style={{ borderRadius: "10%", height: '80%' }} src='/client/assets/Images/Newistock/jewellery/Berry lustre A45.jpg' />
+                                    <p style={{ marginLeft: "3%" }}>
+                                        <Header className="darkText" style={{wordSpacing:'15px'}}> Berry lustre A45</Header>
+                                        <p className="greyText" style={{ display: "flex", flexDirection: "row", justifyContent: "space-between", fontSize: "90%", color: "#9E9E9E" }}><span><Header>$13.00</Header></span>   <span><span style={{ fontWeight: "bold" }}>Quantity</span> 1 Item</span> </p>
                                         <p style={{leeterSpacing:"1px"}}><Icon color="green" name="dot circle outline" />Processing</p>
                                     </p>
                                 </Grid.Column>
