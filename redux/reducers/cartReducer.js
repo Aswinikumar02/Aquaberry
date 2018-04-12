@@ -8,7 +8,7 @@ module.exports = (
     women: [
       {
         imgurl: "./client/assets/Images/Newistock/recommended/Items/iStock-149005145.jpg",
-        name: "Mia Beige Dress w/  White Top",
+        name: "Mia Beige White Top",
         price: "$24.00",
         checked: false
       },
@@ -26,13 +26,13 @@ module.exports = (
       },
       {
         imgurl: "./client/assets/Images/Newistock/recommended/Items/iStock-181101785.jpg",
-        name: "Myrtle Short Sleeveless Dress",
+        name: "Myrtle Short Dress",
         price: "$50.40",
         checked: false
       },
       {
         imgurl: "./client/assets/Images/Newistock/recommended/Items/iStock-179142052.jpg",
-        name: "Clara Broad Striped Short Dress ",
+        name: "Clara Broad Striped Dress ",
         price: "$35.00",
         checked: false
       },

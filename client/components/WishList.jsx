@@ -32,7 +32,7 @@ const WishList = () => {
           <Grid.Column width={7}>
             <Image src="./client/assets/Images/Newistock/wishList/iStock-149005145.jpg" />
             <div>
-              <p style={{ fontWeight: "bold" }}>Mia Beige Dress w/  White Top</p>
+              <p style={{ fontWeight: "bold" }}>Mia Beige White Top</p>
               <p>$24.00</p>
             </div>
           </Grid.Column>
@@ -52,7 +52,7 @@ const WishList = () => {
             <Image src="./client/assets/Images/Newistock/wishList/iStock-181101785.jpg" />
             <div>
               <p style={{ fontWeight: "bold" }}>
-                Myrtle Short Sleeveless Dress
+                Myrtle Short Dress
               </p>
               <p>$50.40</p>
             </div>
@@ -71,7 +71,7 @@ const WishList = () => {
           <Grid.Column width={7}>
             <Image src="./client/assets/Images/Newistock/jewellery/Dean pendant necklace with precious stones.png" />
             <div>
-              <p style={{ fontWeight: "bold" }}>Dean pendant necklace with precious stones</p>
+              <p style={{ fontWeight: "bold" }}>Dean pendant necklace</p>
               <p>$10.00</p>
             </div>
           </Grid.Column>
