@@ -233,7 +233,7 @@ export default class OrderDetails extends Component {
                 src="/client/assets/Images/Newistock/jewellery/Dean pendant necklace with precious stones.png"
               />
               <p style={{ marginLeft: "3%" }}>
-                <Header className="darkText">Dean pendant necklace</Header>
+                <Header className="darkText">Dean Necklace</Header>
                 <p
                   className="greyText"
                   style={{

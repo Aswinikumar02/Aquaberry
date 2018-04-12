@@ -112,7 +112,7 @@ export default class SmartStoreCheckout extends Component {
                                 <Grid.Column width={16} style={{ marginTop:'5%' ,display: "flex", flexDirection: "row", justifyContent: "flex-start" }}>
                                     <Image size='tiny' style={{ borderRadius: "10%", height: '100%' }} src='/client/assets/Images/Newistock/jewellery/Dean pendant necklace with precious stones.png' />
                                     <p style={{ marginLeft: "3%" }}>
-                                        <Header className="darkText" >Dean pendant necklace</Header>
+                                        <Header className="darkText" >Dean necklace</Header>
                                         <p className="greyText" style={{ display: "flex", flexDirection: "row", justifyContent: "space-between", fontSize: "90%", color: "#9E9E9E" }}><span><Header>$10.00</Header></span>   <span><span style={{ fontWeight: "bold" }}>Quantity</span> 1 Item</span> </p>
                                         <p style={{leeterSpacing:"1px"}}><Icon color="green" name="dot circle outline" />Processing</p>
                                     </p>

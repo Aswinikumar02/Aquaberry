@@ -71,7 +71,7 @@ const WishList = () => {
           <Grid.Column width={7}>
             <Image src="./client/assets/Images/Newistock/jewellery/Dean pendant necklace with precious stones.png" />
             <div>
-              <p style={{ fontWeight: "bold" }}>Dean pendant necklace</p>
+              <p style={{ fontWeight: "bold" }}>Dean Necklace</p>
               <p>$10.00</p>
             </div>
           </Grid.Column>
