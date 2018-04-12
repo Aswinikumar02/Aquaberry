@@ -159,7 +159,7 @@ export default class ModifyDeliveryDate extends Component {
                 </p>
               </p>
             </Grid.Column>
-            <Grid.Column width={16}>
+            <Grid.Column width={16} style={{marginTop:'-4%'}}>
               <Divider />
             </Grid.Column>
             <Grid.Column
@@ -168,7 +168,7 @@ export default class ModifyDeliveryDate extends Component {
                 display: "flex",
                 flexDirection: "row",
                 justifyContent: "flex-start",
-                marginTop:'2%'
+                marginTop:'0%'
               }}
             >
               <Image
@@ -197,7 +197,7 @@ export default class ModifyDeliveryDate extends Component {
                 </p>
               </p>
             </Grid.Column>
-            <Grid.Column width={16}>
+            <Grid.Column width={16} style={{marginTop:'-3%'}}>
               <Divider />
             </Grid.Column>
             <Grid.Column
@@ -205,7 +205,7 @@ export default class ModifyDeliveryDate extends Component {
               style={{
                 display: "flex",
                 flexDirection: "row",
-                justifyContent: "flex-start",marginTop:'2%'
+                justifyContent: "flex-start",marginTop:'-1%'
               }}
             >
               <Image
