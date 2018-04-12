@@ -208,10 +208,13 @@ export default class OrderDetails extends Component {
                   </span>{" "}
                 </p>
 
-                {/* <p className="greyText">
+                <p className="greyText" style={{color:'blue'}}>
                   {" "}
-                  <Link to="/modifyDelivery">Need Help? </Link>{" "}
-                </p> */}
+                  <Link to="/modifyDelivery">
+                  Need Help?
+                </Link>
+                {" "}
+                </p>
               </p>
 
             </Grid.Column>
@@ -233,7 +236,7 @@ export default class OrderDetails extends Component {
                 src="/client/assets/Images/Newistock/jewellery/Dean pendant necklace with precious stones.png"
               />
               <p style={{ marginLeft: "3%" }}>
-                <Header className="darkText">Dean Necklace</Header>
+                <Header className="darkText" style={{wordSpacing:'25px'}}>Dean Necklace</Header>
                 <p
                   className="greyText"
                   style={{
@@ -252,10 +255,13 @@ export default class OrderDetails extends Component {
                   </span>{" "}
                 </p>
 
-                {/* <p className="greyText">
+                <p style={{color:'#4183c4',fontFamily:'Raleway'}}>
                   {" "}
-                  <Link to="/modifyDelivery">Need Help? </Link>{" "}
-                </p> */}
+                  {/* <Link to="/modifyDelivery"> */}
+                  Need Help?
+                {/* </Link> */}
+                {" "}
+                </p>
               </p>
             </Grid.Column>
             <Grid.Column width={16}>
@@ -294,9 +300,12 @@ export default class OrderDetails extends Component {
                   </span>{" "}
                 </p>
 
-                <p className="greyText">
+                <p style={{color:'#4183c4',fontFamily:'Raleway'}}>
                   {" "}
-                  <Link to="/modifyDelivery">Need Help? </Link>{" "}
+                  {/* <Link to="/modifyDelivery"> */}
+                  Need Help?
+                {/* </Link> */}
+                {" "}
                 </p>
               </p>
             </Grid.Column>
