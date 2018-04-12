@@ -134,7 +134,7 @@ export default class ModifyDeliveryDate extends Component {
             >
               <Image
                 size="tiny"
-                style={{ borderRadius: "10%", height: "100%" }}
+                style={{ borderRadius: "10%", height: "90%" }}
                 src="/client/assets/Images/Newistock/Orders/iStock-467870548.jpg"
               />
               <p style={{ marginLeft: "3%", fontFamily: "Raleway" }}>
@@ -159,9 +159,84 @@ export default class ModifyDeliveryDate extends Component {
                 </p>
               </p>
             </Grid.Column>
+            <Grid.Column width={16}>
+              <Divider />
+            </Grid.Column>
+            <Grid.Column
+              width={16}
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                justifyContent: "flex-start",
+                marginTop:'2%'
+              }}
+            >
+              <Image
+                size="tiny"
+                style={{ borderRadius: "10%", height: "90%" }}
+                src="/client/assets/Images/Newistock/jewellery/Dean pendant necklace with precious stones.png"
+              />
+              <p style={{ marginLeft: "3%" }}>
+                <Header className="darkText" style={{wordSpacing:'25px'}}>Dean Necklace</Header>
+                <p
+                  className="greyText"
+                  style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    justifyContent: "space-between",
+                    fontSize: "90%",
+                    color: "#9E9E9E"
+                  }}
+                >
+                  <span>
+                    <Header className="darkText">$10.00</Header>
+                  </span>{" "}
+                  <span>
+                    <span style={{ fontWeight: "bold" }}>Quantity</span> 1 Item
+                  </span>{" "}
+                </p>
+              </p>
+            </Grid.Column>
+            <Grid.Column width={16}>
+              <Divider />
+            </Grid.Column>
+            <Grid.Column
+              width={16}
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                justifyContent: "flex-start",marginTop:'2%'
+              }}
+            >
+              <Image
+                size="tiny"
+                style={{ borderRadius: "10%", height: "90%" }}
+                src="/client/assets/Images/Newistock/jewellery/Berry lustre A45.jpg"
+              />
+              <p style={{ marginLeft: "3%" }}>
+                <Header className="darkText" style={{ wordSpacing: "15px" }}>Berry lustre A45</Header>
+                <p
+                  className="greyText"
+                  style={{
+                    display: "flex",
+                    flexDirection: "row",
+                    justifyContent: "space-between",
+                    fontSize: "90%",
+                    color: "#9E9E9E"
+                  }}
+                >
+                  <span>
+                    <Header className="darkText">$13.00</Header>
+                  </span>{" "}
+                  <span>
+                    <span style={{ fontWeight: "bold" }}>Quantity</span> 1 Item
+                  </span>{" "}
+                </p>
+              </p>
+            </Grid.Column>
           </Grid.Row>
 
-          <Grid.Row only="mobile">
+          <Grid.Row only="mobile" style={{marginTop:'-3%'}}>
             <Grid.Column width={1} />
             <Grid.Column width={14}>
               <center>
@@ -169,7 +244,7 @@ export default class ModifyDeliveryDate extends Component {
                   Talk to us{" "}
                 </h3>
               </center>
-              <br />
+              {/* <br /> */}
               <h3 style={{ fontFamily: "Raleway" }}>
                 Update your delivery date and time here!!
               </h3>

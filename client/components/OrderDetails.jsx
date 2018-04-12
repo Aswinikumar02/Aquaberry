@@ -208,13 +208,13 @@ export default class OrderDetails extends Component {
                   </span>{" "}
                 </p>
 
-                <p className="greyText" style={{color:'blue'}}>
+                {/* <p className="greyText" style={{color:'blue'}}>
                   {" "}
                   <Link to="/modifyDelivery">
                   Need Help?
                 </Link>
                 {" "}
-                </p>
+                </p> */}
               </p>
 
             </Grid.Column>
@@ -255,13 +255,13 @@ export default class OrderDetails extends Component {
                   </span>{" "}
                 </p>
 
-                <p style={{color:'#4183c4',fontFamily:'Raleway'}}>
+                {/* <p style={{color:'#4183c4',fontFamily:'Raleway'}}>
                   {" "}
-                  {/* <Link to="/modifyDelivery"> */}
+                  <Link to="/modifyDelivery">
                   Need Help?
-                {/* </Link> */}
+                </Link>
                 {" "}
-                </p>
+                </p> */}
               </p>
             </Grid.Column>
             <Grid.Column width={16}>
@@ -302,9 +302,9 @@ export default class OrderDetails extends Component {
 
                 <p style={{color:'#4183c4',fontFamily:'Raleway'}}>
                   {" "}
-                  {/* <Link to="/modifyDelivery"> */}
+                  <Link to="/modifyDelivery">
                   Need Help?
-                {/* </Link> */}
+                </Link>
                 {" "}
                 </p>
               </p>
