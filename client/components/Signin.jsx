@@ -85,7 +85,7 @@ const Signin = () => {
           <Grid.Column width={12}>
             {" "}
             <center>
-              <link href='android-app://com.lookbookhorizontal.app'>
+              <Link to='android-app://com.lookbookhorizontal.app'>
               <Button
                 fluid
                 style={{
@@ -100,7 +100,7 @@ const Signin = () => {
               >
                 Dream store
               </Button>
-              </link>
+              </Link>
             </center>
           </Grid.Column>
           <Grid.Column width={2} />
