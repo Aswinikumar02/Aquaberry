@@ -98,10 +98,6 @@ class ChatApp extends React.Component {
           console.log('kgjhn',this.state.dateValue);
         });
     }
-// initiateTextToSpeech(){
-//   console.log('inside initiateTextToSpeech');
-//   setTimeout(this.handleSendClick,2000)
-// }
     handleSendClick() {
         var tempMessages = this.state.messages;
         var tempUserMessage = {
@@ -128,12 +124,6 @@ class ChatApp extends React.Component {
                 text: reply
             }
             tempMessages.push(tempBotMessage)
-            setTimeout(()=>{
-              console.log('Inside First settimeout');
-              this.setState({
-                  messages: tempMessages
-              })
-            },5000)
         }
         else if (counter == 2) {
           reply = 'Sure, I can reschedule the delivery for the order #01120448. Let me know your preferred time slot'
@@ -144,11 +134,7 @@ class ChatApp extends React.Component {
               text: reply
           }
           tempMessages.push(tempBotMessage)
-          setTimeout(()=>{
-            this.setState({
-                messages: tempMessages
-            })
-          },2000)
+
 
         }
         else if (counter == 3) {
@@ -161,11 +147,7 @@ class ChatApp extends React.Component {
               text: reply
           }
           tempMessages.push(tempBotMessage)
-          setTimeout(()=>{
-            this.setState({
-                messages: tempMessages
-            })
-          },2000)
+
         }
         else if (counter == 4) {
           reply = 'Always a pleasure.'
@@ -176,11 +158,6 @@ class ChatApp extends React.Component {
               text: reply
           }
           tempMessages.push(tempBotMessage)
-          setTimeout(()=>{
-            this.setState({
-                messages: tempMessages
-            })
-          },2000)
           setTimeout(() => {
             this.setState({
               dateModal: true
@@ -196,11 +173,6 @@ class ChatApp extends React.Component {
               text: reply
           }
           tempMessages.push(tempBotMessage)
-          setTimeout(()=>{
-            this.setState({
-                messages: tempMessages
-            })
-          },2000)
         }
         this.setState({ userInput: '' });
     }
