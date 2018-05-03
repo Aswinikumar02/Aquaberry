@@ -113,85 +113,103 @@ class ReturnChatApp extends React.Component {
     // var requestString = 'http://127.0.0.1:8080/callDialogflow/' + this.state.userInput + '/' + counter;
     var reply;
     if (counter == 1) {
-      reply = "Hello Rachel, how can I help you?";
-      this.textToSpeech(reply);
-      var tempMessages = this.state.messages;
-      var tempBotMessage = {
-        sender: "Bot",
-        text: reply
-      };
-      tempMessages.push(tempBotMessage);
-      this.setState({
-        messages: tempMessages
-      });
-    } else if (counter == 2) {
-      reply =
-        "Sure. Do you want to exchange the Polka dot top?";
-      this.textToSpeech(reply);
-      var tempMessages = this.state.messages;
-      var tempBotMessage = {
-        sender: "Bot",
-        text: reply
-      };
-      tempMessages.push(tempBotMessage);
-      this.setState({
-        messages: tempMessages
-      });
-    } else if (counter == 3) {
-      reply =
-        "I can give you two options. Exchange it from the nearest store or generate a label online.";
-      this.textToSpeech(reply);
-      var tempMessages = this.state.messages;
-      var tempBotMessage = {
-        sender: "Bot",
-        text: reply
-      };
-      tempMessages.push(tempBotMessage);
-      this.setState({
-        messages: tempMessages
-      });
-    } else if (counter == 4) {
-      reply = "Sure. Confirm the pick up date and time";
-      this.textToSpeech(reply);
-      var tempMessages = this.state.messages;
-      var tempBotMessage = {
-        sender: "Bot",
-        text: reply
-      };
-      tempMessages.push(tempBotMessage);
-      this.setState({
-        messages: tempMessages
-      });
-    } else if (counter == 5) {
-      reply =
-        "Sure. System has been updated with the pickup date. The return label is generated. Paste the label and keep the package ready";
-      this.textToSpeech(reply);
-      var tempMessages = this.state.messages;
-      var tempBotMessage = {
-        sender: "Bot",
-        text: reply
-      };
-      tempMessages.push(tempBotMessage);
-      this.setState({
-        messages: tempMessages
-      });
-      setTimeout(() => {
+      setTimeout(()=>{
+        reply = "Hello Rachel, how can I help you?";
+        this.textToSpeech(reply);
+        var tempMessages = this.state.messages;
+        var tempBotMessage = {
+          sender: "Bot",
+          text: reply
+        };
+        tempMessages.push(tempBotMessage);
         this.setState({
-          dateModal: true
+          messages: tempMessages
         });
-      }, 8000);
+      },2000)
+
+    } else if (counter == 2) {
+      setTimeout(()=>{
+        reply =
+          "Sure. Do you want to exchange the Polka dot top?";
+        this.textToSpeech(reply);
+        var tempMessages = this.state.messages;
+        var tempBotMessage = {
+          sender: "Bot",
+          text: reply
+        };
+        tempMessages.push(tempBotMessage);
+        this.setState({
+          messages: tempMessages
+        });
+      },2000)
+
+    } else if (counter == 3) {
+      setTimeout(()=>{
+        reply =
+          "I can give you two options. Exchange it from the nearest store or generate a label online.";
+        this.textToSpeech(reply);
+        var tempMessages = this.state.messages;
+        var tempBotMessage = {
+          sender: "Bot",
+          text: reply
+        };
+        tempMessages.push(tempBotMessage);
+        this.setState({
+          messages: tempMessages
+        });
+      },2000)
+
+    } else if (counter == 4) {
+      setTimeout(()=>{
+        reply = "Sure. Confirm the pick up date and time";
+        this.textToSpeech(reply);
+        var tempMessages = this.state.messages;
+        var tempBotMessage = {
+          sender: "Bot",
+          text: reply
+        };
+        tempMessages.push(tempBotMessage);
+        this.setState({
+          messages: tempMessages
+        });
+      },2000)
+
+    } else if (counter == 5) {
+      setTimeout(()=>{
+        reply =
+          "Sure. System has been updated with the pickup date. The return label is generated. Paste the label and keep the package ready";
+        this.textToSpeech(reply);
+        var tempMessages = this.state.messages;
+        var tempBotMessage = {
+          sender: "Bot",
+          text: reply
+        };
+        tempMessages.push(tempBotMessage);
+        this.setState({
+          messages: tempMessages
+        });
+        setTimeout(() => {
+          this.setState({
+            dateModal: true
+          });
+        }, 8000);
+      },2000)
+
     } else {
-      reply = "This query is not in my database but I am always learning.";
-      this.textToSpeech(reply);
-      var tempMessages = this.state.messages;
-      var tempBotMessage = {
-        sender: "Bot",
-        text: reply
-      };
-      tempMessages.push(tempBotMessage);
-      this.setState({
-        messages: tempMessages
-      });
+      setTimeout(()=>{
+        reply = "This query is not in my database but I am always learning.";
+        this.textToSpeech(reply);
+        var tempMessages = this.state.messages;
+        var tempBotMessage = {
+          sender: "Bot",
+          text: reply
+        };
+        tempMessages.push(tempBotMessage);
+        this.setState({
+          messages: tempMessages
+        });
+      },2000)
+
     }
     this.setState({ userInput: "" });
   }
@@ -303,7 +321,7 @@ class ReturnChatApp extends React.Component {
     }
   }
   initiateSpeechToText(){
-    setTimeout(this.speechToText, 3000);
+    setTimeout(this.speechToText, 4000);
   }
   speechToText(e) {
     var context = this;

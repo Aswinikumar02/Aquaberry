@@ -98,6 +98,10 @@ class ChatApp extends React.Component {
           console.log('kgjhn',this.state.dateValue);
         });
     }
+// initiateTextToSpeech(){
+//   console.log('inside initiateTextToSpeech');
+//   setTimeout(this.handleSendClick,2000)
+// }
     handleSendClick() {
         var tempMessages = this.state.messages;
         var tempUserMessage = {
@@ -114,9 +118,25 @@ class ChatApp extends React.Component {
         // var requestString = 'http://127.0.0.1:8080/callDialogflow/' + this.state.userInput + '/' + counter;
         var reply;
         if (counter == 1) {
+            setTimeout(()=>{
+              console.log('Inside First settimeout Hey');
+              reply = 'Hello Rachel, how can I help you?'
+              this.textToSpeech(reply);
+              var tempMessages = this.state.messages;
+              var tempBotMessage = {
+                  sender: 'Bot',
+                  text: reply
+              }
+              tempMessages.push(tempBotMessage)
+              this.setState({
+                  messages: tempMessages
+              })
+            },5000)
+        }
+        else if (counter == 2) {
 
-            reply = 'Hello Rachel, how can I help you?'
-
+          setTimeout(()=>{
+            reply = 'Sure, I can reschedule the delivery for the order #01120448. Let me know your preferred time slot'
             this.textToSpeech(reply);
             var tempMessages = this.state.messages;
             var tempBotMessage = {
@@ -124,40 +144,44 @@ class ChatApp extends React.Component {
                 text: reply
             }
             tempMessages.push(tempBotMessage)
-        }
-        else if (counter == 2) {
-          reply = 'Sure, I can reschedule the delivery for the order #01120448. Let me know your preferred time slot'
-          this.textToSpeech(reply);
-          var tempMessages = this.state.messages;
-          var tempBotMessage = {
-              sender: 'Bot',
-              text: reply
-          }
-          tempMessages.push(tempBotMessage)
-
+            this.setState({
+                messages: tempMessages
+            })
+          },2000)
 
         }
         else if (counter == 3) {
-          var chatreply = `Sure, your order will be delivered on ${this.state.dateValue}.`
-          reply = chatreply
-          this.textToSpeech(reply);
-          var tempMessages = this.state.messages;
-          var tempBotMessage = {
-              sender: 'Bot',
-              text: reply
-          }
-          tempMessages.push(tempBotMessage)
 
+          setTimeout(()=>{
+            var chatreply = `Sure, your order will be delivered on ${this.state.dateValue}.`
+            reply = chatreply
+            this.textToSpeech(reply);
+            var tempMessages = this.state.messages;
+            var tempBotMessage = {
+                sender: 'Bot',
+                text: reply
+            }
+            tempMessages.push(tempBotMessage)
+            this.setState({
+                messages: tempMessages
+            })
+          },2000)
         }
         else if (counter == 4) {
-          reply = 'Always a pleasure.'
-          this.textToSpeech(reply);
-          var tempMessages = this.state.messages;
-          var tempBotMessage = {
-              sender: 'Bot',
-              text: reply
-          }
-          tempMessages.push(tempBotMessage)
+
+          setTimeout(()=>{
+            reply = 'Always a pleasure.'
+            this.textToSpeech(reply);
+            var tempMessages = this.state.messages;
+            var tempBotMessage = {
+                sender: 'Bot',
+                text: reply
+            }
+            tempMessages.push(tempBotMessage)
+            this.setState({
+                messages: tempMessages
+            })
+          },2000)
           setTimeout(() => {
             this.setState({
               dateModal: true
@@ -165,14 +189,20 @@ class ChatApp extends React.Component {
           }, 2000);
         }
         else {
-          reply = 'This query is not in my database but I am always learning.'
-          this.textToSpeech(reply);
-          var tempMessages = this.state.messages;
-          var tempBotMessage = {
-              sender: 'Bot',
-              text: reply
-          }
-          tempMessages.push(tempBotMessage)
+
+          setTimeout(()=>{
+            reply = 'This query is not in my database but I am always learning.'
+            this.textToSpeech(reply);
+            var tempMessages = this.state.messages;
+            var tempBotMessage = {
+                sender: 'Bot',
+                text: reply
+            }
+            tempMessages.push(tempBotMessage)
+            this.setState({
+                messages: tempMessages
+            })
+          },2000)
         }
         this.setState({ userInput: '' });
     }
