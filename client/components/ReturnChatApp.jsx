@@ -78,6 +78,7 @@ class ReturnChatApp extends React.Component {
     this.handleKeyDown = this.handleKeyDown.bind(this);
     this.speechToText = this.speechToText.bind(this);
     this.textToSpeech = this.textToSpeech.bind(this);
+    this.initiateSpeechToText = this.initiateSpeechToText.bind(this);
     this.dataVAr = this.dataVAr.bind(this);
   }
   handleClick = () => {
@@ -202,57 +203,57 @@ class ReturnChatApp extends React.Component {
   }
 
   printMessages(item) {
-    // if (item.sender === "User") {
-    //   // return (<Card zDepth={3} style={userCardStyle}>
-    //   //           <CardHeader
-    //   //             title="User"
-    //   //             avatarRight="images/bot.png"
-    //   //           />
-    //   //           <CardText>
-    //   //             {item.text}
-    //   //           </CardText>
-    //   //         </Card>)
-    //   return (
-    //     <Grid fluid>
-    //       <Grid.Column width={16}>
-    //         <div
-    //           style={{
-    //             display: "block"
-    //           }}
-    //         >
-    //           <Image avatar
-    //             src='./client/assets/Images/istock/profile.png'
-    //             floated="right"
-    //             size="massive"
-    //             alt=""
-    //             style={{
-    //               marginLeft: "2%"
-    //             }}
-    //           />
-    //           <Card
-    //             style={{
-    //               borderRadius: "30px",
-    //               padding: "0 1%",
-    //               margin: "1% -2.5% 6% 33.5%",
-    //               color: "black",
-    //               width: "50%"
-    //             }}
-    //           >
-    //             <Card.Content>
-    //               <Card.Description
-    //                 style={{
-    //                   color: "#212121"
-    //                 }}
-    //               >
-    //                 {item.text}
-    //               </Card.Description>
-    //             </Card.Content>
-    //           </Card>
-    //         </div>
-    //       </Grid.Column>
-    //     </Grid>
-    //   );
-    // }
+    if (item.sender === "User") {
+      // return (<Card zDepth={3} style={userCardStyle}>
+      //           <CardHeader
+      //             title="User"
+      //             avatarRight="images/bot.png"
+      //           />
+      //           <CardText>
+      //             {item.text}
+      //           </CardText>
+      //         </Card>)
+      return (
+        <Grid fluid>
+          <Grid.Column width={16}>
+            <div
+              style={{
+                display: "block"
+              }}
+            >
+              <Image avatar
+                src='./client/assets/Images/istock/profile.png'
+                floated="right"
+                size="massive"
+                alt=""
+                style={{
+                  marginLeft: "2%"
+                }}
+              />
+              <Card
+                style={{
+                  borderRadius: "30px",
+                  padding: "0 1%",
+                  margin: "1% -2.5% 6% 33.5%",
+                  color: "black",
+                  width: "50%"
+                }}
+              >
+                <Card.Content>
+                  <Card.Description
+                    style={{
+                      color: "#212121"
+                    }}
+                  >
+                    {item.text}
+                  </Card.Description>
+                </Card.Content>
+              </Card>
+            </div>
+          </Grid.Column>
+        </Grid>
+      );
+    }
     if(item.sender == 'Bot') {
       // return (<Card zDepth={3} style={botCardStyle}>
       //           <CardText>
@@ -273,7 +274,7 @@ class ReturnChatApp extends React.Component {
                 alt=""
                 style={{
                   marginLeft: "-7%",
-                  marginTop: "0%"
+                  marginTop: "-15%"
                 }}
               />
               <Card
@@ -301,7 +302,9 @@ class ReturnChatApp extends React.Component {
       );
     }
   }
-
+  initiateSpeechToText(){
+    setTimeout(this.speechToText, 3000);
+  }
   speechToText(e) {
     var context = this;
     // var recognition = new SpeechRecognition();
@@ -399,7 +402,7 @@ class ReturnChatApp extends React.Component {
                       </Grid.Column>
                       <Grid.Column width={3}>
                         <IconButton tooltip="Speak">
-                          <AvMic color={blue500} onClick={this.speechToText} />
+                          <AvMic color={blue500} onClick={this.initiateSpeechToText} />
                         </IconButton>
                       </Grid.Column>
                     </Grid.Row>

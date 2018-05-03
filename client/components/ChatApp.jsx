@@ -48,10 +48,12 @@ class ChatApp extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
+            botMessage:'',
             userInput: '',
             speechResult:'',
             textdata:' ',
             dateModal:false,
+            messageModal:false,
             autoHideDuration: 6000,
             dateValue:'',
             eventmessage: 'Delivery date changed successfully',
@@ -62,6 +64,7 @@ class ChatApp extends React.Component {
         this.handleKeyDown = this.handleKeyDown.bind(this);
         this.speechToText = this.speechToText.bind(this);
         this.textToSpeech = this.textToSpeech.bind(this);
+        this.initiateSpeechToText = this.initiateSpeechToText.bind(this);
         this.dataVAr = this.dataVAr.bind(this);
     }
     handleClick = () => {
@@ -95,7 +98,10 @@ class ChatApp extends React.Component {
           console.log('kgjhn',this.state.dateValue);
         });
     }
-
+// initiateTextToSpeech(){
+//   console.log('inside initiateTextToSpeech');
+//   setTimeout(this.handleSendClick,2000)
+// }
     handleSendClick() {
         var tempMessages = this.state.messages;
         var tempUserMessage = {
@@ -108,6 +114,7 @@ class ChatApp extends React.Component {
         this.setState({
             messages: tempMessages
         })
+
         // var requestString = 'http://127.0.0.1:8080/callDialogflow/' + this.state.userInput + '/' + counter;
         var reply;
         if (counter == 1) {
@@ -121,9 +128,12 @@ class ChatApp extends React.Component {
                 text: reply
             }
             tempMessages.push(tempBotMessage)
-            this.setState({
-                messages: tempMessages
-            })
+            setTimeout(()=>{
+              console.log('Inside First settimeout');
+              this.setState({
+                  messages: tempMessages
+              })
+            },5000)
         }
         else if (counter == 2) {
           reply = 'Sure, I can reschedule the delivery for the order #01120448. Let me know your preferred time slot'
@@ -134,23 +144,13 @@ class ChatApp extends React.Component {
               text: reply
           }
           tempMessages.push(tempBotMessage)
-          this.setState({
-              messages: tempMessages
-          })
+          setTimeout(()=>{
+            this.setState({
+                messages: tempMessages
+            })
+          },2000)
+
         }
-        // else if (counter == 3) {
-        //   reply = 'Please '
-        //   this.textToSpeech(reply);
-        //   var tempMessages = this.state.messages;
-        //   var tempBotMessage = {
-        //       sender: 'Bot',
-        //       text: reply
-        //   }
-        //   tempMessages.push(tempBotMessage)
-        //   this.setState({
-        //       messages: tempMessages
-        //   })
-        // }
         else if (counter == 3) {
           var chatreply = `Sure, your order will be delivered on ${this.state.dateValue}.`
           reply = chatreply
@@ -161,9 +161,11 @@ class ChatApp extends React.Component {
               text: reply
           }
           tempMessages.push(tempBotMessage)
-          this.setState({
-              messages: tempMessages
-          })
+          setTimeout(()=>{
+            this.setState({
+                messages: tempMessages
+            })
+          },2000)
         }
         else if (counter == 4) {
           reply = 'Always a pleasure.'
@@ -174,9 +176,11 @@ class ChatApp extends React.Component {
               text: reply
           }
           tempMessages.push(tempBotMessage)
-          this.setState({
-              messages: tempMessages
-          })
+          setTimeout(()=>{
+            this.setState({
+                messages: tempMessages
+            })
+          },2000)
           setTimeout(() => {
             this.setState({
               dateModal: true
@@ -192,9 +196,11 @@ class ChatApp extends React.Component {
               text: reply
           }
           tempMessages.push(tempBotMessage)
-          this.setState({
-              messages: tempMessages
-          })
+          setTimeout(()=>{
+            this.setState({
+                messages: tempMessages
+            })
+          },2000)
         }
         this.setState({ userInput: '' });
     }
@@ -207,88 +213,65 @@ class ChatApp extends React.Component {
 
     printMessages(item) {
       console.log('inside item',item.sender);
-        //if (item.sender === 'User') {
-          // let input = item.text;
-          // let data = input.split(" ");
-          // console.log('data value',data);
-          // console.log('data value,,,,,,,',data.length);
-          //  let i = 0;
-          //  if(i < data.length){
-          //    console.log('value iof i', data[i]);
-          //    usermessage = data[i];
-          //    this.setState({textdata:usermessage})
-          //  }
-          //  i++
-          // let timerId = setInterval(() =>{
-          //   if(i < data.length){
-          //     this.setState({
-          //       textdata : this.state.textdata + " " + data[i]
-          //     });
-          //   }
-          //   i++;
-          //   if( i === data.length + 1){
-          //     clearInterval(timerId);
-          //   }
-          // },750);
-          //console.log('outside render',this.state.textdata);
-            //return (
-            //     <Grid fluid>
-            //       <Grid.Column width = {16} >
-            //         <div style={{
-            //         display: 'block'
-            //       }}>
-            //       <Image avatar src='./client/assets/Images/istock/profile.png' floated='right' size="massive" alt="" style={{
-            //           marginLeft: '2%'
-            //         }}/>
-            //       <Card style={{
-            //           borderRadius: '30px',
-            //           padding: '0 1%',
-            //           margin: '1% -2.5% 6% 33.5%',
-            //           color: 'black',
-            //           width: '50%'
-            //         }}>
-            //         <Card.Content>
-            //           <Card.Description style={{
-            //               color: '#212121'
-            //             }}>{item.text}</Card.Description>
-            //         </Card.Content>
-            //       </Card>
-            //         </div>
-            //         </Grid.Column>
-            //     </Grid>
-            // )
-        //}
-        if(item.sender === 'Bot') {
-            return (
-                <Grid fluid>
-                  <Grid.Column width = {16} >
-                    <div style={{
-                    display: 'block'
-                  }}>
-                  <Image src='./client/assets/Images/istock/bot.png' size='tiny' style={{
-                      marginLeft: '-7%',marginTop:'-2%'
-                    }}/>
-                  {/* <Icon name='android' size="large" alt="" style={{
-                      marginLeft: '0%',marginTop:'-16%'
-                    }}/> */}
-                  <Card style={{
+      if (item.sender === 'User') {
+          return (
+              <Grid fluid>
+                <Grid.Column width = {16} >
+                  <div style={{
+                  display: 'block'
+                }}>
+                <Image avatar src='./client/assets/Images/istock/profile.png' floated='right' size="massive" alt="" style={{
+                    marginLeft: '2%'
+                  }}/>
+                <Card style={{
                     borderRadius: '30px',
                     padding: '0 1%',
-                    margin: '-20% -2.5% 2% 13.5%',
+                    margin: '1% -2.5% 6% 33.5%',
                     color: 'black',
                     width: '50%'
-                    }}>
-                    <Card.Content>
-                      <Card.Description style={{
-                          color: '#212121'
-                        }}>{item.text}</Card.Description>
-                    </Card.Content>
-                  </Card>
-                    </div>
-                    </Grid.Column>
-                </Grid>
-            )
+                  }}>
+                  <Card.Content>
+                    <Card.Description style={{
+                        color: '#212121'
+                      }}>{item.text}</Card.Description>
+                  </Card.Content>
+                </Card>
+                  </div>
+                  </Grid.Column>
+              </Grid>
+          )
+      }
+        if(item.sender === 'Bot') {
+          return(
+            <Grid fluid>
+              <Grid.Column width = {16} >
+                <div style={{
+                display: 'block'
+              }}>
+              <Image src='./client/assets/Images/istock/bot.png' size='tiny' style={{
+                  marginLeft: '-7%',marginTop:'-15%'
+                }}/>
+              <Card style={{
+                borderRadius: '30px',
+                padding: '0 1%',
+                margin: '-20% -2.5% 2% 13.5%',
+                color: 'black',
+                width: '50%'
+                }}>
+                <Card.Content>
+                  <Card.Description style={{
+                      color: '#212121'
+                    }}>{item.text}</Card.Description>
+                </Card.Content>
+              </Card>
+                </div>
+                </Grid.Column>
+            </Grid>
+          )
         }
+    }
+    initiateSpeechToText(){
+      setTimeout(this.speechToText, 3000);
     }
     speechToText(){
       console.log('inside speech to text');
@@ -300,22 +283,6 @@ class ChatApp extends React.Component {
                 speechResult = 'Hi'
               }
               else if(questionCounter == 2){
-                // let input = 'Can you reschedule the delivery of my order';
-                // let data = input.split(' ');
-                // console.log('data length ',data.length);
-                // let i = 0;
-                // let timerId = setInterval(() => {
-                //   if(i < data.length){
-                //     this.setState({
-                //       speechResult : this.state.speechResult + " " + data[i]
-                //     })
-                //     console.log('inside if',this.state.speechResult);
-                //   }
-                //   i++;
-                //   if(i === data.length + 1){
-                //     clearInterval(timerId);
-                //   }
-                // },750)
                 speechResult = 'Can you reschedule the delivery of my order'
               }
               else if(questionCounter == 3){
@@ -329,6 +296,7 @@ class ChatApp extends React.Component {
               context.setState({ userInput: speechResult }, () => {
                   context.handleSendClick();
               });
+
           }
     // speechToText(e) {
     //     var context = this;
@@ -397,6 +365,7 @@ class ChatApp extends React.Component {
     }
     dataVAr(){
       var data = this.state.messages.map((item) => {
+
           return (this.printMessages(item))
       });
       return data;
@@ -431,7 +400,7 @@ class ChatApp extends React.Component {
                         <Grid.Column width={3}>
                           <IconButton tooltip="Speak">
                                                    <AvMic color={blue500}
-                                                       onClick={this.speechToText}/>
+                                                       onClick={this.initiateSpeechToText}/>
                                                        </IconButton>
                         </Grid.Column>
                       </Grid.Row>
