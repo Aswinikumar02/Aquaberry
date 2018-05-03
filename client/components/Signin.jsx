@@ -80,6 +80,31 @@ const Signin = () => {
           <Grid.Column width={2} />
         </Grid.Row>
 
+        <Grid.Row only="mobile">
+          <Grid.Column width={2} />
+          <Grid.Column width={12}>
+            {" "}
+            <center>
+              <Link to='android-app://com.lookbookhorizontal.app'>
+              <Button
+                fluid
+                style={{
+                  borderRadius: "5px",
+                  backgroundColor: "#EB4678",
+                  letterSpacing: "2px",
+                  fontWeight: "bold",
+                  textTransform: "uppercase",
+                  fontSize: "100%",
+                  color: "#FAFAFA"
+                }}
+              >
+                Dream store
+              </Button>
+              </Link>
+            </center>
+          </Grid.Column>
+          <Grid.Column width={2} />
+        </Grid.Row>
         {/* <Grid.Row style={{marginTop:"-2%"}} only='mobile'>
             <Grid.Column width={3}></Grid.Column>
             <Grid.Column width={10}><p style={{textAlign:"center", fontWeight:"normal", letterSpacing:"2px",fontFamily:"Open Sans"}} >Forgotten Password?</p></Grid.Column>
