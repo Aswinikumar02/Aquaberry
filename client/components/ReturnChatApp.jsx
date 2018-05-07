@@ -125,7 +125,7 @@ class ReturnChatApp extends React.Component {
         this.setState({
           messages: tempMessages
         });
-      },2000)
+      },1500)
 
     } else if (counter == 2) {
       setTimeout(()=>{
@@ -141,7 +141,7 @@ class ReturnChatApp extends React.Component {
         this.setState({
           messages: tempMessages
         });
-      },2000)
+      },1500)
 
     } else if (counter == 3) {
       setTimeout(()=>{
@@ -157,7 +157,7 @@ class ReturnChatApp extends React.Component {
         this.setState({
           messages: tempMessages
         });
-      },2000)
+      },1500)
 
     } else if (counter == 4) {
       setTimeout(()=>{
@@ -172,7 +172,7 @@ class ReturnChatApp extends React.Component {
         this.setState({
           messages: tempMessages
         });
-      },2000)
+      },1500)
 
     } else if (counter == 5) {
       setTimeout(()=>{
@@ -193,7 +193,7 @@ class ReturnChatApp extends React.Component {
             dateModal: true
           });
         }, 8000);
-      },2000)
+      },1500)
 
     } else {
       setTimeout(()=>{
@@ -208,7 +208,7 @@ class ReturnChatApp extends React.Component {
         this.setState({
           messages: tempMessages
         });
-      },2000)
+      },1500)
 
     }
     this.setState({ userInput: "" });
@@ -321,7 +321,7 @@ class ReturnChatApp extends React.Component {
     }
   }
   initiateSpeechToText(){
-    setTimeout(this.speechToText, 4000);
+    setTimeout(this.speechToText, 2000);
   }
   speechToText(e) {
     var context = this;

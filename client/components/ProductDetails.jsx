@@ -108,10 +108,10 @@ render(){
         </Link>
 
           <Slider {...settings} style={{height:'65vh'}}>
-          <div><center><Image src='./client/assets/Images/Newistock/productDetail/iStock-535350451.jpg' size='medium' style={{height:'65vh'}} /></center></div>
-            <div><center><Image src='./client/assets/Images/Newistock/productDetail/iStock-467870548.jpg' size='medium' style={{height:'65vh'}}/></center></div>
-            {/* <div><center><Image src='http://media.wallis.co.uk/wcsstore/Wallis/images/catalog/WL250391024_Zoom_D_1.jpg' size='medium'/></center></div>
-            <div><center><Image src='http://media.wallis.co.uk/wcsstore/Wallis/images/catalog/WL250391024_Zoom_P_1.jpg' size='medium'/></center></div>
+          <div><center><Image src='./client/assets/Images/Newistock/wishList/iStock-489082240.jpg' size='medium' style={{height:'65vh'}} /></center></div>
+            <div><center><Image src='./client/assets/Images/Newistock/wishList/iStock-489082016.jpg' size='medium' style={{height:'65vh'}}/></center></div>
+            <div><center><Image src='./client/assets/Images/Newistock/wishList/iStock-489082160.jpg' size='medium'/></center></div>
+            {/* <div><center><Image src='http://media.wallis.co.uk/wcsstore/Wallis/images/catalog/WL250391024_Zoom_P_1.jpg' size='medium'/></center></div>
             <div><center><Image src='http://media.wallis.co.uk/wcsstore/Wallis/images/catalog/WL250391024_Zoom_M_1.jpg' size='medium'/></center></div> */}
           </Slider>
           </Grid.Column>
@@ -120,7 +120,7 @@ render(){
         <Grid.Row>
           <Grid.Column width={1}/>
           <Grid.Column width={10}>
-            <h2 style={{fontSize:'18px',marginTop:'-10%',fontFamily: 'Raleway', textTransform:'capitalize'}}>Sia Dress w/ Pockets</h2>
+            <h2 style={{fontSize:'18px',marginTop:'-10%',fontFamily: 'Raleway', textTransform:'capitalize'}}>Sia Orange Dress w/ Bag</h2>
           </Grid.Column>
           <Grid.Column width={5}/>
         </Grid.Row>

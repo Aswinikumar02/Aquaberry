@@ -22,9 +22,9 @@ const WishList = () => {
           <Grid.Column width={1} />
           <Grid.Column width={7}>
             <Link to="/productDetails/top1">
-              <Image src="./client/assets/Images/Newistock/wishList/iStock-467870548.jpg" />
+              <Image src="./client/assets/Images/Newistock/wishList/iStock-489082240.jpg" />
               <div style={{ color: "black" }}>
-                <p style={{ fontWeight: "bold" }}>Sia Dress w/ Pockets</p>
+                <p style={{ fontWeight: "bold" }}>Sia Orange Dress w/ Bag</p>
                 <p>$33.00</p>
               </div>
             </Link>

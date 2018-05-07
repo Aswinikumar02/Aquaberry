@@ -131,7 +131,7 @@ class ChatApp extends React.Component {
               this.setState({
                   messages: tempMessages
               })
-            },5000)
+            },1500)
         }
         else if (counter == 2) {
 
@@ -147,7 +147,7 @@ class ChatApp extends React.Component {
             this.setState({
                 messages: tempMessages
             })
-          },2000)
+          },1500)
 
         }
         else if (counter == 3) {
@@ -165,7 +165,7 @@ class ChatApp extends React.Component {
             this.setState({
                 messages: tempMessages
             })
-          },2000)
+          },1500)
         }
         else if (counter == 4) {
 
@@ -181,7 +181,7 @@ class ChatApp extends React.Component {
             this.setState({
                 messages: tempMessages
             })
-          },2000)
+          },1500)
           setTimeout(() => {
             this.setState({
               dateModal: true
@@ -202,7 +202,7 @@ class ChatApp extends React.Component {
             this.setState({
                 messages: tempMessages
             })
-          },2000)
+          },1500)
         }
         this.setState({ userInput: '' });
     }
@@ -273,7 +273,7 @@ class ChatApp extends React.Component {
         }
     }
     initiateSpeechToText(){
-      setTimeout(this.speechToText, 3000);
+      setTimeout(this.speechToText, 2000);
     }
     speechToText(){
       console.log('inside speech to text');

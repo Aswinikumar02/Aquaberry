@@ -186,10 +186,10 @@ export default class OrderDetails extends Component {
               <Image
                 size="tiny"
                 style={{ borderRadius: "10%", height: "100%" }}
-                src="/client/assets/Images/Newistock/Orders/iStock-467870548.jpg"
+                src="/client/assets/Images/Newistock/Orders/iStock-489082240.jpg"
               />
               <p style={{ marginLeft: "3%" }}>
-                <Header className="darkText"> Sia Dress w/ Pockets</Header>
+                <Header className="darkText"> Sia Orange Dress w/ Bag</Header>
                 <p
                   className="greyText"
                   style={{

@@ -19,8 +19,8 @@ module.exports = (
         checked: false
       },
       {
-        imgurl: "./client/assets/Images/Newistock/recommended/Items/iStock-467870548.jpg",
-        name: "Sia Dress w/ Pockets",
+        imgurl: "./client/assets/Images/Newistock/wishList/iStock-489082240.jpg",
+        name: "Sia Orange Dress w/ Bag",
         price: "$33.00",
         checked: false
       },
